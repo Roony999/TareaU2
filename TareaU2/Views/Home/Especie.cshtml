@@ -8,7 +8,7 @@
         <img src="~/especies/@(Model.Id).jpg" />
         <div>
             <h1>@Model.NombreClase</h1>
-            <p><label>Clase:</label><a href="~/especies.html">@Model.NombreClase</a></p>
+            <p><label>Clase:</label><a href="~/Home/especies?nombrees=@Model.NombreClase">@Model.NombreClase</a></p>
             <p><label>Peso:</label>@Model.Peso</p>
             <p><label>Tamaño:</label>@Model.Tamano</p>
             <p><label>Habitat:</label>@Model.Habitat</p>
@@ -16,6 +16,6 @@
             <p>@Model.Observaciones</p>
         </div>
 
-        <a href="~/Home/especies?nombrees=@Model.NombreClase">Regresar</a>
+        <a href="~/Home/especies?nombrees=@(Model.NombreClase)">Regresar</a>
     </div>
 </main>

@@ -1,0 +1,24 @@
+﻿@model TareaU2.Models.ViewModels.EspeciesVM;
+@{
+    Layout = "Layout";
+}
+
+<h1>
+    <img src="~/clases/@(Model.id).png" />@(Model.nombre)
+</h1>
+
+<div class="listaEspecies2">
+    @foreach (var clase2 in Model.Especiesls)
+    {
+        <a href="~/Home/especie?nombreesp=@clase2.Especie">
+            <img src="~/especies/@(clase2.Id).jpg" title="@(clase2.Especie)" />
+        </a>
+    }
+   
+</div>
+
+<script>
+
+    var c = document.querySelector("main h1 img").cloneNode();
+    document.querySelector("main h1").appendChild(c);
+</script>

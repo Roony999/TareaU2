@@ -1,0 +1,28 @@
+﻿@model TareaU2.Models.ViewModels.indexvm
+@{
+    Layout = "Layout";
+}
+
+    <main>
+
+        <div class="slides">
+            <img src="~/images/carousel1.jpg" />
+        </div>
+
+        <h1>Clasificación de los vertebrados</h1>
+
+        <div class="clases">
+            
+           @foreach(var clase in Model.AnimalCLS)
+             {
+            <div>
+            <a href="~/Home/especies?nombrees=@clase.Nombre">
+                    <img src="~/clases/@(clase.id).jpg" />
+                    <h1>@clase.Nombre</h1>
+                    <p>@clase.descripcion</p>
+                </a>
+            </div>
+           }
+        </div>
+
+    </main>
